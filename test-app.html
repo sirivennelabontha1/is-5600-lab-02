@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+  <script src="app.js"></script>
+</head>
+<body>
+  <div id="test-output"></div>
+  <script>
+    // Test data loading
+    setTimeout(() => {
+      console.log('userData length:', window.userData ? window.userData.length : 'undefined');
+      console.log('stocksData length:', window.stocksData ? window.stocksData.length : 'undefined');
+      console.log('selectedUser:', window.selectedUser);
+      
+      if (window.userData && window.userData.length > 0) {
+        const user = window.userData[0];
+        console.log('First user:', user);
+        console.log('User properties:', Object.keys(user));
+        console.log('User portfolio:', user.portfolio);
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
